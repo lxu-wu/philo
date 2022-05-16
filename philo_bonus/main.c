@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:28:02 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/12 20:45:20 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:17:53 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,6 @@ int	ft_init(t_data *data)
 		return (1);
 	}
 	return (0);
-}
-
-void	ft_print_input(t_input input)
-{
-	printf("n_philo = %d\n", input.n_philo);
-	printf("time_to_die = %zu\n", input.time_to_die);
-	printf("time_to_eat = %zu\n", input.time_to_eat);
-	printf("time_to_sleep = %zu\n", input.time_to_sleep);
-	printf("eat_times = %zu\n", input.eat_times);
 }
 
 int	ft_error(int e)

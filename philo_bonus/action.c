@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:27:55 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/16 15:29:55 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:17:35 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,11 @@ void	*ft_check_died(void *arg)
 	while (philo->ate != data->input.eat_times)
 	{
 		sem_wait(data->talk);
-		if (ft_current_time() - philo->last_meal > data->input.time_to_die)
+		if (ft_current_time() - philo->last_meal
+			> (size_t)data->input.time_to_die)
 		{
-			if (ft_current_time() - philo->last_meal <= data->input.time_to_die)
+			if (ft_current_time() - philo->last_meal
+				<= (size_t)data->input.time_to_die)
 			{
 				sem_post(data->talk);
 				continue ;

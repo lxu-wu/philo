@@ -6,20 +6,20 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:28:09 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/12 20:39:13 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:15:26 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-size_t	ft_atoi_positive(const char *str)
+int	ft_atoi_positive(const char *str)
 {
 	size_t	i;
 	size_t	nb;
 
 	i = 0;
 	nb = 0;
-	if (!str[i])
+	if (!str || !str[i])
 		return (-1);
 	while (str[i] && str[i] >= 48 && str[i] <= 57)
 	{

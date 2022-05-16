@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:28:07 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/13 14:07:22 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:16:37 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ typedef struct s_philo
 typedef struct s_input
 {
 	int		n_philo;
-	size_t	time_to_die;
-	size_t	time_to_eat;
-	size_t	time_to_sleep;
-	size_t	eat_times;
+	int		time_to_die;
+	int		time_to_eat;
+	int		time_to_sleep;
+	int		eat_times;
 }	t_input;
 
 typedef struct s_data
@@ -58,7 +58,7 @@ typedef struct s_data
 	pthread_t		*check_pros;
 }	t_data;
 
-size_t		ft_atoi_positive(const char *str);
+int			ft_atoi_positive(const char *str);
 void		ft_print_input(t_input input);
 void		ft_wait(t_data *data);
 size_t		ft_current_time(void);

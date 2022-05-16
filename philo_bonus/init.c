@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:37:24 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/16 15:27:35 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:12:13 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ int	ft_take_info(t_data *data)
 	if (data->input.n_philo < 1 || data->input.n_philo > 200)
 		return (1);
 	data->input.time_to_die = ft_atoi_positive(data->argv[2]);
-	if (data->input.time_to_die < 0 || data->input.time_to_die < 60)
+	if (data->input.time_to_die < 60)
 		return (1);
 	data->input.time_to_eat = ft_atoi_positive(data->argv[3]);
-	if (data->input.time_to_eat < 0 || data->input.time_to_eat < 60)
+	if (data->input.time_to_eat < 60)
 		return (1);
 	data->input.time_to_sleep = ft_atoi_positive(data->argv[4]);
-	if (data->input.time_to_sleep < 0 || data->input.time_to_sleep < 60)
+	if (data->input.time_to_sleep < 60)
 		return (1);
 	data->input.eat_times = -1;
 	if (data->argc == 6)

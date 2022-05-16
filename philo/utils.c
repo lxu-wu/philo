@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:27:34 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/16 17:56:58 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:15:37 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi_positive(const char *str)
 
 	i = 0;
 	nb = 0;
-	if (!str[i])
+	if (!str || !str[i])
 		return (-1);
 	while (str[i] && str[i] >= 48 && str[i] <= 57)
 	{
