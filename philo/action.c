@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:37:47 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/16 15:27:45 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 18:09:58 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_check_dead(t_data *data)
 	size_t	die;
 
 	i = 0;
-	while (!data->died)
+	while (!data->died && data->finish != data->input.n_philo)
 	{	
 		if (i == data->input.n_philo)
 			i = 0;
@@ -94,7 +94,10 @@ void	*ft_start_routine(void *param)
 	while (!data->died)
 	{
 		if (philo->ate == data->input.eat_times)
-			break ;
+		{
+			data->finish++;
+			return (0);
+		}
 		if (!data->died && &philo->lfork != philo->rfork)
 			ft_action(philo, data);
 		else

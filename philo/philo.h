@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:27:50 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/12 19:27:51 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 17:57:35 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ typedef struct s_data
 	pthread_mutex_t	talk;
 	pthread_mutex_t	meal;
 	atomic_int		died;
+	atomic_int		finish;
 }	t_data;
 
 int			ft_atoi_positive(const char *str);
@@ -78,5 +79,6 @@ void		*ft_start_routine(void *param);
 int			ft_init(t_data *data);
 
 void		ft_check_dead(t_data *data);
+int			ft_finish_to_eat(t_data *data);
 
 #endif

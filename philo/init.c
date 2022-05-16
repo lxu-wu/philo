@@ -6,7 +6,7 @@
 /*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 20:37:52 by lxu-wu            #+#    #+#             */
-/*   Updated: 2022/05/16 15:17:36 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/05/16 17:58:13 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int	ft_init_thread(t_data *data)
 	i = 0;
 	data->died = 0;
 	data->start_time = ft_current_time();
+	data->finish = 0;
 	while (i < (size_t)data->input.n_philo)
 	{
 		data->philo[i].die = 0;
